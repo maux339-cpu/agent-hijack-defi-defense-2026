@@ -65,7 +65,7 @@
 
 ## Skills deste repositório
 
-Skills **defensivas** em `skills/` (formato Claude/Grok `SKILL.md`):
+### Defensivas
 
 | Skill | Quando usar |
 |-------|-------------|
@@ -73,6 +73,61 @@ Skills **defensivas** em `skills/` (formato Claude/Grok `SKILL.md`):
 | [`prompt-injection-authorized-test`](skills/prompt-injection-authorized-test/SKILL.md) | Red team autorizado de system prompt / agent |
 | [`defi-ai-audit-hunt`](skills/defi-ai-audit-hunt/SKILL.md) | Pipeline IA+estático em **seu** contrato / bounty |
 | [`agent-privilege-checklist`](skills/agent-privilege-checklist/SKILL.md) | Least privilege + HITL antes de ship |
+
+### Ofensivas (só ROE / bounty / lab)
+
+| Skill | Quando usar |
+|-------|-------------|
+| [`offensive-agent-prompt-injection`](skills/offensive-agent-prompt-injection/SKILL.md) | Quebrar agent com injection/goal hijack |
+| [`offensive-mcp-tool-abuse`](skills/offensive-mcp-tool-abuse/SKILL.md) | MCP poisoning / tool coercion |
+| [`offensive-defi-ai-exploit-hunt`](skills/offensive-defi-ai-exploit-hunt/SKILL.md) | Caça SC com IA + Foundry PoC |
+| [`offensive-ai-redteam-suite`](skills/offensive-ai-redteam-suite/SKILL.md) | **Índice** de todos os packs ofensivos do arsenal |
+
+---
+
+## Wave 6.1 — packs ofensivos (X + GitHub)
+
+### A) Frameworks / scanners ofensivos (forks novos)
+
+| Fork | Upstream | Uso |
+|------|----------|-----|
+| [deepteam](https://github.com/maux339-cpu/deepteam) | confident-ai | Red team LLM/agents |
+| [agentic_security](https://github.com/maux339-cpu/agentic_security) | msoedov | Scanner agentic / red team kit |
+| [hackagent](https://github.com/maux339-cpu/hackagent) | AISecurityLab | Vulns em AI agents |
+| [src-hunter-skill](https://github.com/maux339-cpu/src-hunter-skill) | MyuriKanao | Playbooks SRC/bounty + payloads |
+| [ai-llm-red-team-handbook](https://github.com/maux339-cpu/ai-llm-red-team-handbook) | Shiva108 | Handbook metodológico |
+| [SCONE-bench](https://github.com/maux339-cpu/SCONE-bench) | safety-research | Bench exploit SC + LLM |
+| [scone-bench-1](https://github.com/maux339-cpu/scone-bench-1) | anthropics/scone-bench | Bench Anthropic SCONE |
+
+### B) Firewalls (util ofensivo para testar bypass / defesa)
+
+| Fork | Upstream | Uso |
+|------|----------|-----|
+| [pipelock](https://github.com/maux339-cpu/pipelock) | luckyPipewrench | Firewall MCP/egress |
+| [prismor](https://github.com/maux339-cpu/prismor) | PrismorSec | Runtime firewall tool calls |
+| [agentguard](https://github.com/maux339-cpu/agentguard) | GoPlusSecurity | Guard runtime agents |
+
+### C) Packs ofensivos já no arsenal (cross-ref X)
+
+| Fork | Papel |
+|------|--------|
+| [Claude-Red](https://github.com/maux339-cpu/Claude-Red) | 100+ skills red team (`Skills/ai/offensive-ai-security`) |
+| [hack-skills](https://github.com/maux339-cpu/hack-skills) | `ai-ml-security` + SC domains |
+| [strix](https://github.com/maux339-cpu/strix) | Agents pentest |
+| [garak](https://github.com/maux339-cpu/garak) / [promptfoo](https://github.com/maux339-cpu/promptfoo) | LLM red team |
+| [Claude-BugHunter](https://github.com/maux339-cpu/Claude-BugHunter) / [recon-skills](https://github.com/maux339-cpu/recon-skills) | BB recon |
+| [pombocyber-skills-cybersec](https://github.com/maux339-cpu/pombocyber-skills-cybersec) | Mega pack |
+| [web3-bug-bounty-hunting-ai-skills](https://github.com/maux339-cpu/web3-bug-bounty-hunting-ai-skills) / [.context](https://github.com/maux339-cpu/.context) | Web3/SC |
+
+### Playbook ofensivo rápido
+
+```text
+Support bot:     offensive-agent-prompt-injection + deepteam + promptfoo
+MCP host:        offensive-mcp-tool-abuse + agentseal + pipelock
+DeFi SC:         offensive-defi-ai-exploit-hunt + foundry + slither + SCONE
+Full LLM RT:     Claude-Red offensive-ai + garak + agentic_security + handbook
+BB web:          src-hunter-skill + strix + recon-skills
+```
 
 ---
 
@@ -94,18 +149,32 @@ Skills **defensivas** em `skills/` (formato Claude/Grok `SKILL.md`):
 
 Índice pai: **[arsenal-osint-defi-2026](https://github.com/maux339-cpu/arsenal-osint-defi-2026)** → **Wave 6**.
 
-Forks desta wave:
+Forks Wave 6 + 6.1:
 
 ```text
+# Wave 6
 maux339-cpu/agentseal
 maux339-cpu/strix
 maux339-cpu/hack-skills
 maux339-cpu/garak
 maux339-cpu/rebuff
-maux339-cpu/agent-hijack-defi-defense-2026   ← este índice
+# Wave 6.1 ofensivo
+maux339-cpu/deepteam
+maux339-cpu/agentic_security
+maux339-cpu/hackagent
+maux339-cpu/src-hunter-skill
+maux339-cpu/ai-llm-red-team-handbook
+maux339-cpu/SCONE-bench
+maux339-cpu/scone-bench-1
+# Wave 6.1 firewall
+maux339-cpu/pipelock
+maux339-cpu/prismor
+maux339-cpu/agentguard
+# índice
+maux339-cpu/agent-hijack-defi-defense-2026
 ```
 
-Já existentes (cross-ref): `promptfoo`, `slither`, `echidna`, `foundry`.
+Já existentes (cross-ref): `promptfoo`, `slither`, `echidna`, `foundry`, `Claude-Red`, packs web3.
 
 ---
 
