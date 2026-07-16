@@ -1,0 +1,77 @@
+{
+  "wave": 6,
+  "title": "Agent Hijack + DeFi AI Defense 2026",
+  "updated": "2026-07-16",
+  "scope": "authorized research and defense only",
+  "forks_this_wave": [
+    {
+      "name": "agentseal",
+      "upstream": "getagentseal/agentseal",
+      "url": "https://github.com/maux339-cpu/agentseal",
+      "category": "agent-defense",
+      "x_signal": "AgentSeal prompt injection + MCP poisoning toolkit"
+    },
+    {
+      "name": "strix",
+      "upstream": "usestrix/strix",
+      "url": "https://github.com/maux339-cpu/strix",
+      "category": "ai-pentest-agents",
+      "x_signal": "Strix AI pentest agents trending GitHub"
+    },
+    {
+      "name": "hack-skills",
+      "upstream": "yaklang/hack-skills",
+      "url": "https://github.com/maux339-cpu/hack-skills",
+      "category": "skill-pack",
+      "x_signal": "SKILL.md pack for agents including AI/LLM and smart contracts"
+    },
+    {
+      "name": "garak",
+      "upstream": "NVIDIA/garak",
+      "url": "https://github.com/maux339-cpu/garak",
+      "category": "llm-vuln-scanner",
+      "x_signal": "LLM vulnerability scanner"
+    },
+    {
+      "name": "rebuff",
+      "upstream": "protectai/rebuff",
+      "url": "https://github.com/maux339-cpu/rebuff",
+      "category": "prompt-injection-detector",
+      "x_signal": "Protect AI rebuff detector"
+    }
+  ],
+  "cross_ref_existing": [
+    "promptfoo",
+    "slither",
+    "echidna",
+    "foundry",
+    "damn-vulnerable-defi-foundry",
+    "arsenal-osint-defi-2026",
+    "security-agent-skills-arsenal"
+  ],
+  "skills_local": [
+    "agent-goal-hijack-defense",
+    "prompt-injection-authorized-test",
+    "defi-ai-audit-hunt",
+    "agent-privilege-checklist"
+  ],
+  "threat_model": {
+    "monetization": [
+      "agent goal hijacking / prompt injection on refund-support-research bots",
+      "autonomous smart contract exploitation agents (research SCONE-style)"
+    ],
+    "why_2026": [
+      "mass shipping of tool-using agents",
+      "agentic AI top attack vector in security surveys",
+      "autonomous SC exploit economics approaching break-even"
+    ],
+    "defenses": [
+      "untrusted text as DATA not COMMAND",
+      "human-in-the-loop on spend/refund",
+      "least privilege tools",
+      "agent audit",
+      "contract pause/circuit breaker",
+      "monitor new deploys"
+    ]
+  }
+}
